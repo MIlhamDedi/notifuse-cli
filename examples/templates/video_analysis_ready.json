@@ -1,0 +1,46 @@
+{
+  "id": "video_analysis_ready",
+  "name": "Video Ready",
+  "channel": "email",
+  "category": "transactional",
+  "email": {
+    "reply_to": "team@courtpro.space",
+    "subject": "Your rally analysis is ready",
+    "subject_preview": "Open CourtPro to review your breakdown.",
+    "compiled_preview": "<p>Your rally analysis is ready.</p>",
+    "visual_editor_tree": {
+      "id": "mjml-1",
+      "type": "mjml",
+      "children": [
+        {
+          "id": "body-1",
+          "type": "mj-body",
+          "children": [
+            {
+              "id": "section-1",
+              "type": "mj-section",
+              "children": [
+                {
+                  "id": "column-1",
+                  "type": "mj-column",
+                  "children": [
+                    {
+                      "id": "text-1",
+                      "type": "mj-text",
+                      "content": "Your rally analysis is ready. Open CourtPro to review your breakdown."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "text": "Your rally analysis is ready. Open {{ analysis_url }} to review your breakdown."
+  },
+  "test_data": {
+    "first_name": "Ilham",
+    "analysis_url": "https://courtpro.space/app/analysis/example"
+  }
+}

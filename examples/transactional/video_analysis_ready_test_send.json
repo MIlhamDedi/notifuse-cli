@@ -1,0 +1,18 @@
+{
+  "notification": {
+    "id": "video_analysis_ready",
+    "external_id": "test-video-analysis-ready",
+    "contact": {
+      "email": "ilham@alif.ventures",
+      "first_name": "Ilham"
+    },
+    "channels": ["email"],
+    "data": {
+      "first_name": "Ilham",
+      "analysis_url": "https://courtpro.space/app/analysis/example"
+    },
+    "email_options": {
+      "reply_to": "team@courtpro.space"
+    }
+  }
+}

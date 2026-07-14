@@ -80,12 +80,25 @@ notifuse --profile courtpro contacts upsert --body-file contact.json --dry-run -
 
 notifuse --profile courtpro templates list --pretty
 notifuse --profile courtpro templates compile --body-file compile.json --dry-run --pretty
+notifuse --profile courtpro templates validate-file --file examples/templates/video_analysis_ready.json --pretty
+notifuse --profile courtpro templates compile-from-file --file examples/templates/video_analysis_ready.json --dry-run --pretty
+notifuse --profile courtpro templates create-from-file --file examples/templates/video_analysis_ready.json --dry-run --pretty
+notifuse --profile courtpro templates update-from-file --file examples/templates/video_analysis_ready.json --dry-run --pretty
 
 notifuse --profile courtpro broadcasts create-draft --body-file broadcast.json --dry-run --pretty
 notifuse --profile courtpro broadcasts test-send --body-file test-send.json --dry-run --pretty
+notifuse --profile courtpro transactional test-send --body-file examples/transactional/video_analysis_ready_test_send.json --dry-run --pretty
 ```
 
 `broadcasts test-send` requires the recipient email in the body to be present in the profile `allowed_test_recipients` list. `broadcasts schedule`, `broadcasts resume`, and production `broadcasts send` are blocked by design.
+
+`transactional test-send` also requires `notification.contact.email` to be present in `allowed_test_recipients`. Production `transactional send` is blocked by design.
+
+## Rich visual email templates
+
+Notifuse's API accepts rich visual-email templates through `email.visual_editor_tree`, with rendered HTML stored in `email.compiled_preview`. This CLI can validate, create, update, and compile those JSON files, so templates can be reviewed in Git and managed by agents.
+
+The visual tree itself is easiest to author in the Notifuse web dashboard, then export or copy into a JSON file. Hand-authoring minimal MJML trees is possible, but the dashboard remains the better editor for complex visual layouts.
 
 ## Raw allowlisted API calls
 

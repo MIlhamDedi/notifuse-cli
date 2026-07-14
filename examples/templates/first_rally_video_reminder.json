@@ -1,0 +1,46 @@
+{
+  "id": "first_rally_video_reminder",
+  "name": "First Upload Reminder",
+  "channel": "email",
+  "category": "transactional",
+  "email": {
+    "reply_to": "team@courtpro.space",
+    "subject": "Upload your first rally video",
+    "subject_preview": "CourtPro can start analyzing once your first rally is uploaded.",
+    "compiled_preview": "<p>Upload your first rally video to get your first analysis.</p>",
+    "visual_editor_tree": {
+      "id": "mjml-1",
+      "type": "mjml",
+      "children": [
+        {
+          "id": "body-1",
+          "type": "mj-body",
+          "children": [
+            {
+              "id": "section-1",
+              "type": "mj-section",
+              "children": [
+                {
+                  "id": "column-1",
+                  "type": "mj-column",
+                  "children": [
+                    {
+                      "id": "text-1",
+                      "type": "mj-text",
+                      "content": "Upload your first rally video to CourtPro and get your first analysis."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "text": "Upload your first rally video to CourtPro: {{ upload_url }}"
+  },
+  "test_data": {
+    "first_name": "Ilham",
+    "upload_url": "https://courtpro.space/app/upload"
+  }
+}
